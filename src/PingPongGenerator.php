@@ -4,9 +4,14 @@
     {
         function printOut($input_number)
         {
-            $output = "";
-            for ($i = 1; $i <= $input_number; $i++) {
-                $output .= $i . ", ";
+            $output = "1";
+
+            for ($i = 2; $i <= $input_number; $i++) {
+                if ($i % 3 == 0) {
+                    $output .= ", Ping";
+                } else {
+                    $output .= ", " . $i;
+                };
             };
             return $output;
         }

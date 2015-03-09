@@ -11,7 +11,17 @@
 
             $result = $test_PingPongGenerator->printOut($input);
 
-            $this->assertEquals("1, 2, ", $result);
+            $this->assertEquals("1, 2", $result);
+        }
+
+        function test_printIntegers_replace_3_w_Ping()
+        {
+            $test_PingPongGenerator = new PingPongGenerator;
+            $input = 3;
+
+            $result = $test_PingPongGenerator->printOut($input);
+
+            $this->assertEquals("1, 2, Ping", $result);
         }
     }
 
