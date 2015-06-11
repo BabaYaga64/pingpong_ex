@@ -2,18 +2,18 @@
 
     class PingPongGenerator
     {
-        function printOut($input_number)
-        {
-            $output = "1";
-
-            for ($i = 2; $i <= $input_number; $i++) {
-                if ($i % 3 == 0) {
-                    $output .= ", Ping";
-                } else {
-                    $output .= ", " . $i;
-                };
-            };
-            return $output;
+        function ping_pong($count_max) {
+	    $output_array = [];
+	        for ($i = 1; $i <= $count_max; $i++) {
+		        if ($i % 5 == 0 && $i % 3 == 0) {
+			        array_push($output_array, "Ping-Pong");
+		        } elseif ($i % 5 == 0) {
+			        array_push($output_array, "Ping");
+		        } elseif ($i % 3 == 0) {	
+			        array_push($output_array, "Pong");
+		        } else { array_push($output_array, $i);	
+		        } return $output_array;
+            }
         }
     }
 
